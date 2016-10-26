@@ -1,0 +1,18 @@
+<h1>Таймер</h1>
+
+<%= form_for( @event) do |f| %>
+
+    <%= f.label :name, "Название задачи" %> <br>
+    <%= f.text_field(:name)%>
+    <%= f.hidden_field(:start_date, id:"start_date") %>
+    <%= f.hidden_field(:end_date, id:"end_date") %>
+
+        <span id ="time">
+
+    </span>
+    <%=link_to "Старт", '#',  remote: true,  id: "Start"%> <br>
+
+    <%= f.submit %>
+
+<%end%>
+<%= link_to 'Back', events_path %>

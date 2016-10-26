@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>Название</th>
+    <th>Дата начала</th>
+    <th>Дата окончания</th>
+  </tr>
+  <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+
+        <td><%= event.start_date.strftime("%H:%M:%S:%L")unless event.start_date.blank? %></td>
+        <td><%= event.end_date.strftime("%H:%M:%S:%L") unless event.end_date.blank? %></td>
+
+      </tr>
+  <% end %>

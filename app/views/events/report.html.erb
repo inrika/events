@@ -1,0 +1,17 @@
+<h1>Список Задач</h1>
+<%= debug( $new_events)%>
+<table>
+  <tr>
+    <th>Название</th>
+    <th>Период</th>
+    </tr>
+
+  <% $new_events.each do |k,v| %>
+      <tr>
+        <td><%= k %></td>
+
+        <td> <%= v %> </td>
+
+      </tr>
+  <% end %>
+</table>

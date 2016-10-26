@@ -1,0 +1,15 @@
+var beginTime;
+
+if ($("#Start").text()== "Старт") {
+    $("#Start").text("Стоп")
+     beginTime =new(Date);
+     DateToSTR (beginTime, "start_date");
+
+    var intervalId = setInterval(timer, 1000);
+}
+else {
+    $("#Start").text("Старт")
+    clearInterval(intervalId)
+    DateToSTR (new(Date), "end_date");
+
+}
