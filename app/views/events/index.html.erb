@@ -1,21 +1,32 @@
-<h1>Список Задач</h1>
+<h2 >Список задач</h2>
+
+<div class="links">
+
 <%=link_to 'Новая задача', new_event_path%>
+<%=link_to 'Отчет', report_events_path%>
+</div>
 
-
-<table>
-  <tr>
-    <th>Название</th>
-    <th>Дата начала</th>
-    <th>Дата окончания</th>
-  </tr>
+<br>
+<div class= "tasks">
+  <table>
+    <tr>
+      <th>Название</th>
+      <th>Дата начала</th>
+      <th>Дата окончания</th>
+      <th>  </th>
+      <th>  </th>
+    </tr>
 
   <% @events.each do |event| %>
       <tr>
         <td><%= event.name %></td>
-
         <td><%= event.start_date.strftime("%H:%M:%S:%L")unless event.start_date.blank? %></td>
         <td><%= event.end_date.strftime("%H:%M:%S:%L") unless event.end_date.blank? %></td>
         <td><%= link_to 'Show', event_path(event) %></td>
+        <td><%= link_to 'Destroy', event_path(event),
+                         method: :delete,
+                         data: { confirm: 'Вы уверены?' }%></td>
       </tr>
   <% end %>
-</table>
+  </table>
+</div>

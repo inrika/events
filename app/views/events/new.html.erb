@@ -1,18 +1,20 @@
-<h1>Таймер</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset+0">
 
-<%= form_for( @event) do |f| %>
+     <%= form_for( @event) do |f| %>
 
-    <%= f.label :name, "Название задачи" %> <br>
-    <%= f.text_field(:name)%>
-    <%= f.hidden_field(:start_date, id:"start_date") %>
-    <%= f.hidden_field(:end_date, id:"end_date") %>
+       <%= f.label :name, "Название задачи" %> <br>
+       <%= f.text_field(:name)%>
+       <%= f.hidden_field(:start_date, id:"start_date") %>
+       <%= f.hidden_field(:end_date, id:"end_date") %>
 
-        <span id ="time">
+       <span id ="time">
+       </span>
+       <%=link_to "Старт", '#',  remote: true,  id: "Start"%>
+       <%=link_to "Стоп", '#',  remote: true,  id: "Stop"%>
+     <%end%>
+     <br>
+    <%= link_to 'Back', events_path %>
 
-    </span>
-    <%=link_to "Старт", '#',  remote: true,  id: "Start"%> <br>
-
-    <%= f.submit %>
-
-<%end%>
-<%= link_to 'Back', events_path %>
+  </div>
+</div>

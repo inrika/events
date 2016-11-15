@@ -1,3 +1,5 @@
+var beginTime;
+var intervalId
 function myClock() {
     var siteTime = new Date(); //создаём объект Date()
     var hour = siteTime.getHours(); //получаем часы
@@ -52,15 +54,26 @@ function timer() {
 
 }
 
-//if ($("#Start").click(function() {
-//    alert( "Handler for .click() called." );
-//}));
-
-
 document.addEventListener("turbolinks:load", function() {
-    console.log("turbolink");
-    if ($("#Start").click(function() {
-        console.log("click link");;
-    }));
+
+    $("#Start").on ("click",function(){
+        $("#Start").toggle();
+        $("#Stop").toggle();
+        beginTime =new(Date);
+        DateToSTR (beginTime, "start_date");
+        intervalId = setInterval(timer, 1000);
+    })
+    $("#Stop").on ("click",function(){
+        $("#Start").toggle();
+        $("#Stop").toggle();
+        clearInterval(intervalId);
+        DateToSTR (new(Date), "end_date");
+        $("#new_event").submit();
+
+
+    })
+    $("#ReportButton").on ("click",function(){
+        console.log("click");
+    })
 })
 

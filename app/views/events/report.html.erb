@@ -1,17 +1,16 @@
-<h1>Список Задач</h1>
-<%= debug( $new_events)%>
-<table>
-  <tr>
-    <th>Название</th>
-    <th>Период</th>
-    </tr>
+<h3>Показать задачи</h3>
+<%=Time.now%>
+<div class="reportHead">
+  <%=form_tag(report_events_path, method: :get, remote: true) do  %>
 
-  <% $new_events.each do |k,v| %>
-      <tr>
-        <td><%= k %></td>
+      <%=label_tag :date1, "с " %>
+      <%=date_field_tag("date1")%>
+      <%=label_tag :name, "по " %>
+      <%=date_field_tag("date2")%>
+      <%=submit_tag("Ок", id: "ReportButton") %>
+  <%end%>
+</div>
 
-        <td> <%= v %> </td>
+<div id = "reportBody">
 
-      </tr>
-  <% end %>
-</table>
+</div>

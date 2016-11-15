@@ -1,0 +1,65 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body {
+  padding-top: 10px;
+  padding_left: 20px;
+}
+section {
+  overflow: auto;
+}
+textarea {
+  resize: vertical;
+}
+.center {
+  text-align: center;
+}
+.center h1 {
+  margin-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  padding_left: 20px;
+}
+.tasks{
+  padding-left: 20px;
+}
+
+.links{
+  padding-left: 20px;
+
+}
+a {
+  color:  gra;
+  padding-right:40px;
+  &:hover {
+    color: #222;
+  }
+}
+.reportHead{
+  margin-bottom: 50px;
+}
+
+
+table{border-collapse:collapse;}
+
+table, th, td {border: 0px solid black;}
+td{
+  text-align:right;
+  padding:5px;}
+th {
+  background-color: #eeeeee;
+}
+
+$gray-medium-light: #eaeaea;
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}

@@ -1,24 +1,14 @@
-# README
+**Простейший  Тайм трекер**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Можно ввести название задачи, нажать 'Старт', начинает работать таймер, 
+который можно остановить нажатием на 'Стоп', при этом задача сохраняется 
+в базу.
 
-Things you may want to cover:
+Реализован отчет по задачам за заданный период с суммированием времени.
 
-* Ruby version
 
-* System dependencies
+**The simple Time tracker**
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Enter the name of the task, click 'Start', the timer begins to work, 
+Сlick 'Stop' for stop timer and the task'l save into DB.
+The report shows tasks for given period.
